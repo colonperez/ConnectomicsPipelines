@@ -5,6 +5,7 @@ Created on Thu Sep 13 15:19:21 2018
 
 @author: luiscp
 """
+#testing Github
 from IPython import get_ipython
 get_ipython().run_line_magic('matplotlib', 'inline')
 from os.path import join as opj
@@ -79,7 +80,7 @@ datasink.inputs.substitutions = substitutions
 
 preproc = Workflow(name='preproc')
 preproc.base_dir = experiment_dir
-                 
+
 preproc.connect([(infosource, selectfiles, [('subject_id','subject_id')]),
                  (selectfiles, smooth, [('t1', 'in_file')]),
                  (smooth, recon_all, [('smoothed_file', 'T1_files')]),
